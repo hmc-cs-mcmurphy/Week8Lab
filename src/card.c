@@ -6,7 +6,7 @@
 #include "common.h"
 
 void card_malloc(struct card **card) {
-  if (!(*card = malloc(sizeof(struct card)-12))) {
+  if (!(*card = malloc(sizeof(struct card)))) {
     tty_solitaire_generic_error(errno, __FILE__, __LINE__);
   }
   frame_malloc(&((*card)->frame));
